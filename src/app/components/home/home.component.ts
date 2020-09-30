@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import {SpotifyService} from '../../services/spotify.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +7,17 @@ import { HttpClient } from '@angular/common/http';
   styles: [
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  newReleases: any[] = [];
+  loading: boolean;
 
-  ngOnInit(): void {
+  constructor(private spotiService: SpotifyService) {
+    this.loading = true;
+    this.spotiService.getNewReleases()
+      .subscribe((data: any) => {
+        this.newReleases = data;
+        this.loading = false;
+      });
   }
-
 }

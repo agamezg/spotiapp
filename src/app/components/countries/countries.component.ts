@@ -12,7 +12,7 @@ export class CountriesComponent implements OnInit {
   countries: any[] = [];
 
   constructor( private http: HttpClient ) {
-    console.log('Constructor del Home ejecutado');
+    console.log('Constructor del countries ejecutado');
     this.http.get('https://restcountries.eu/rest/v2/lang/es')
       .subscribe( (resp: any) => {
         this.countries = resp;

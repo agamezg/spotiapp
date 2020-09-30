@@ -8,9 +8,12 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CountriesComponent } from './components/countries/countries.component';
-import {ROUTES} from './app.routes';
 
-// Importar rutas
+// Importando rutas
+import {ROUTES} from './app.routes';
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { CardsComponent } from './components/cards/cards.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import {ROUTES} from './app.routes';
     HomeComponent,
     SearchComponent,
     NavbarComponent,
-    CountriesComponent
+    CountriesComponent,
+    NoimagePipe,
+    CardsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
