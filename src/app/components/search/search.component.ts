@@ -19,6 +19,7 @@ export class SearchComponent {
     this.spotiService.searchArtists(keyword)
       .subscribe((data: any) => {
         this.artists = data;
+        console.log(data);
         this.loading = false;
       });
   }

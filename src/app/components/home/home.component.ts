@@ -17,6 +17,7 @@ export class HomeComponent {
     this.spotiService.getNewReleases()
       .subscribe((data: any) => {
         this.newReleases = data;
+        console.log(data);
         this.loading = false;
       });
   }
