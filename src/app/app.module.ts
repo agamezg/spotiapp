@@ -15,6 +15,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
 import { CardsComponent } from './components/cards/cards.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { ArtistComponent } from './components/artist/artist.component';
+import { SecureUriPipePipe } from './pipes/SecureUriPipe.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ArtistComponent } from './components/artist/artist.component';
     NavbarComponent,
     CountriesComponent,
     NoimagePipe,
+    SecureUriPipePipe,
     CardsComponent,
     LoadingComponent,
     ArtistComponent
